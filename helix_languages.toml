@@ -1,0 +1,5 @@
+[[language]]
+name = "rust"
+
+[language.config]
+rust-analyzer.diagnostics.disabled = ["mismatched-arg-count", "macro-error", "unresolved-proc-macro"]

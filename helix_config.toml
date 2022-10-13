@@ -1,0 +1,17 @@
+theme = "dark_plus"
+
+[editor]
+idle-timeout = 0
+rulers = [100]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+"space" = { q = ":q" }
+A-w = ":w"

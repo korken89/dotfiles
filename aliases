@@ -1,0 +1,12 @@
+alias install="yay -S"
+alias update="yay -Sy"
+alias upgrade="sudo pacman -Syu; yay -Syua; paccache -r; yay -Sc --noconfirm; rustup update"
+alias remove="yay -R"
+alias search="yay -Ss"
+alias rtlatex="latexmk -pvc -pdf"
+alias hx=helix
+alias v=hx
+alias vi=hx
+alias vim=hx
+alias nwr="sudo systemctl restart NetworkManager"
+alias bat="bat --theme base16"
