@@ -18,7 +18,7 @@
 [push]
     default = simple
 [core]
-    editor = hx
+    editor = helix
     pager = delta
 [merge]
 	ff = false

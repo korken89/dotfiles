@@ -45,23 +45,7 @@ fi
 # clipclean &
 
 # Fix java programs
-export AWT_TOOLKIT=MToolKit
-export _JAVA_AWT_WM_NONREPARENTING=1
-wmname LG3D
+# export AWT_TOOLKIT=MToolKit
+# export _JAVA_AWT_WM_NONREPARENTING=1
+# wmname LG3D
 
-# Natural scrolling enable (the position of the setting moves...)
-#POS=$(xinput --list-props "ETPS/2 Elantech Touchpad" | grep "Natural Scrolling Enabled (" | awk -F"[()]" '{print $2}')
-#xinput set-prop "ETPS/2 Elantech Touchpad" $POS 1 &
-xinput set-prop "VEN_06CB:00 06CB:CE7E Touchpad" "libinput Tapping Enabled" 1 &
-xinput set-prop "VEN_06CB:00 06CB:CE7E Touchpad" "libinput Natural Scrolling Enabled" 1 &
-xinput set-prop "VEN_06CB:00 06CB:CE7E Touchpad" "libinput Middle Emulation Enabled" 1 &
-xinput set-prop "VEN_06CB:00 06CB:CE7E Touchpad" "libinput Accel Speed" 0.4 &
-
-light -N 1
-
-# while true; do
-    # dwm 2> ~/.dwm.log
-# done
-
-# exec dwm
-exec awesome

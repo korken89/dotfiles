@@ -1,5 +1,6 @@
-Xft.dpi: 180
-Xcursor.size: 48
+Xft.dpi: 80
+# Xft.dpi: 180
+# Xcursor.size: 48
 
 !! Transparency (0-1):
 *.alpha: 0.8

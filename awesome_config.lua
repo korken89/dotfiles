@@ -19,27 +19,27 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- battery widget
-local battery_widget = require("battery-widget")
-local BAT0 = battery_widget {
-    ac = "AC",
-    adapter = "BAT0",
-    ac_prefix = "🔌 ",
-    battery_prefix = "🔋 ",
-    percent_colors = {
-        { 25, "red"   },
-        { 40, "orange"},
-        {999, "green" },
-    },
-    listen = true,
-    timeout = 10,
-    widget_text = " ${AC_BAT}${color_on}${percent}% (${time_est})${color_off} ",
-    widget_font = "Deja Vu Sans Mono 12",
-    tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
-    alert_threshold = 10,
-    alert_timeout = 0,
-    alert_title = "Low battery !",
-    alert_text = "${AC_BAT}${time_est}"
-}
+-- local battery_widget = require("battery-widget")
+-- local BAT0 = battery_widget {
+--     ac = "AC",
+--     adapter = "BAT0",
+--     ac_prefix = "🔌 ",
+--     battery_prefix = "🔋 ",
+--     percent_colors = {
+--         { 25, "red"   },
+--         { 40, "orange"},
+--         {999, "green" },
+--     },
+--     listen = true,
+--     timeout = 10,
+--     widget_text = " ${AC_BAT}${color_on}${percent}% (${time_est})${color_off} ",
+--     widget_font = "Deja Vu Sans Mono 12",
+--     tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
+--     alert_threshold = 10,
+--     alert_timeout = 0,
+--     alert_title = "Low battery !",
+--     alert_text = "${AC_BAT}${time_est}"
+-- }
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -627,9 +627,10 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("dunst")
 awful.spawn.with_shell("xautolock -time 30 -locker pixellock")
 awful.spawn.with_shell("setxkbmap -layout 'us,se(nodeadkeys)' -option grp:caps_toggle")
-awful.spawn.with_shell("clipclean")
-awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Tapping Enabled\" 1")
-awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Natural Scrolling Enabled\" 1")
-awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Middle Emulation Enabled\" 1")
-awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Accel Speed\" 0.1")
-awful.spawn.with_shell("light -N 1")
+awful.spawn.with_shell("wmname LG3D")
+-- awful.spawn.with_shell("clipclean")
+-- awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Tapping Enabled\" 1")
+-- awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Natural Scrolling Enabled\" 1")
+-- awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Middle Emulation Enabled\" 1")
+-- awful.spawn.with_shell("xinput set-prop \"VEN_06CB:00 06CB:CE7E Touchpad\" \"libinput Accel Speed\" 0.1")
+-- awful.spawn.with_shell("light -N 1")

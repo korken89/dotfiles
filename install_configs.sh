@@ -20,23 +20,30 @@ ln -sf "$(pwd)/Xresources" ~/.Xresources
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 ln -sf "$(pwd)/helix_languages.toml" ~/.config/helix/languages.toml
 ln -sf "$(pwd)/helix_config.toml" ~/.config/helix/config.toml
+ln -sf "$(pwd)/profile" ~/.profile
 
 sudo ln -sf "$(pwd)/pixellock" /usr/bin/pixellock
 
 
 # Install minimal stuff
-sudo pacman -S alacritty awesome rofi nitrogen picom volumeicon helix git base-devel \
+sudo pacman -S alacritty awesome rofi nitrogen picom volumeicon xorg \
+               helix git base-devel imagemagick dunst xautolock \
+               lightdm lightdm-slick-greeter lightdm-gtk-greeter \
                light maim xclip thunar firefox lxappearance network-manager-applet \
                docker blueman wireplumber pipewire-v4l2 pipewire-pulse pipewire-jack \
-               pipewire-audio pipewire-alsa pipewire wireshark-qt \
-               rustup cargo-watch cargo-exapnd cargo-bloat \
+               pipewire-audio pipewire-alsa pipewire wireshark-qt pavucontrol  \
+               rustup cargo-watch cargo-expand cargo-bloat \
+               ttf-fira-code tmux fzf inkscape gimp ripgrep \
+               arc-icon-theme arc-gtk-theme \
                --needed --noconfirm
 
 # Install yay and that stuff
+rm -rf yay
 (git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --needed --noconfirm)
 
-yay -S nerf-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \ 
+yay -S nerd-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \ 
        ttf-font-awesome ttf-ms-fonts \
+       lightdm-settings \
        --needed --noconfirm
 
 # Groups
@@ -44,7 +51,7 @@ yay -S nerf-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo usermod -aG wheel $USER
-sudo usermod -aG plugdev $USER
+sudo usermod -aG uucp $USER
 sudo usermod -aG wireshark $USER
 
 # Enable some services
@@ -54,6 +61,7 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable docker
 sudo systemctl start docker
+sudo systemctl enable lightdm
 
 # Extend .bashrc
 echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
