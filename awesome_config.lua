@@ -217,7 +217,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 25 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -363,7 +363,7 @@ globalkeys = gears.table.join(
 
     -- Exit menu
     awful.key({ modkey, "Shift"   }, "c", function ()
-        awful.util.spawn("pmenu") end,
+        awful.util.spawn("rofi -show p -modi p:/home/emifre/.config/dotfiles/rofi-power-menu") end,
               {description = "exit menu", group = "screen"}),
 
     -- Exprorer
@@ -616,16 +616,16 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Gaps
-beautiful.useless_gap = 5
+beautiful.useless_gap = 2
 
 awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("picom -D 3")
 awful.spawn.with_shell("nitrogen --restore")
--- awful.spawn.with_shell("")#dropbox start")
+awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("dunst")
-awful.spawn.with_shell("xautolock -time 30 -locker pixellock")
+awful.spawn.with_shell("xautolock -time 10 -locker pixellock")
 awful.spawn.with_shell("setxkbmap -layout 'us,se(nodeadkeys)' -option grp:caps_toggle")
 awful.spawn.with_shell("wmname LG3D")
 -- awful.spawn.with_shell("clipclean")
