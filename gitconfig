@@ -28,3 +28,5 @@
     push = remote
 [color]
 	ui = auto
+[diff]
+	external = difft

@@ -15,6 +15,7 @@ ln -sf "$(pwd)/config.rasi" ~/.config/rofi/config.rasi
 ln -sf "$(pwd)/dunstrc" ~/.config/dunst/dunstrc
 ln -sf "$(pwd)/awesome_config.lua" ~/.config/awesome/rc.lua
 ln -sf "$(pwd)/awesome_themes" ~/.config/awesome/themes
+ln -sf "$(pwd)/awesome_modules" ~/.config/awesome/modules
 ln -sf "$(pwd)/aliases" ~/.aliases
 ln -sf "$(pwd)/Xresources" ~/.Xresources
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
@@ -41,14 +42,11 @@ sudo pacman -S alacritty awesome rofi nitrogen picom volumeicon xorg \
 rm -rf yay
 (git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --needed --noconfirm)
 
-yay -S nerd-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \ 
-       ttf-font-awesome ttf-ms-fonts \
-       lightdm-settings \
-       --needed --noconfirm
+yay -S nerd-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-font-awesome ttf-ms-fonts lightdm-settings --needed --noconfirm
 
 # Groups
 
-sudo groupadd docker
+# sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo usermod -aG wheel $USER
 sudo usermod -aG uucp $USER

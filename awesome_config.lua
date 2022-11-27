@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+local modules = require("modules")
+
 -- battery widget
 -- local battery_widget = require("battery-widget")
 -- local BAT0 = battery_widget {
@@ -86,6 +88,7 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
+    modules.layouts.centermaster,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
@@ -616,7 +619,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Gaps
-beautiful.useless_gap = 2
+beautiful.useless_gap = 3
 
 awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("nm-applet")
