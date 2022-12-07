@@ -3,6 +3,7 @@ theme = "dark_plus"
 [editor]
 idle-timeout = 0
 rulers = [100]
+bufferline = "always"
 
 [editor.cursor-shape]
 normal = "block"
@@ -12,6 +13,11 @@ select = "underline"
 [editor.lsp]
 display-messages = true
 
-[keys.normal]
-"space" = { q = ":q" }
-A-w = ":w"
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+# [keys.normal]
+# "space" = { q = ":q" }
+# A-w = ":w"

@@ -516,7 +516,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Arandr",
+          -- "Arandr",
           "Blueman-manager",
           "Gpick",
           "Kruler",
@@ -534,7 +534,7 @@ awful.rules.rules = {
         -- and the name shown there might not match defined rules here.
         name = {
           "Event Tester",  -- xev.
-          "Media viewer", -- Telegram desktop media viewer
+          -- "Media viewer", -- Telegram desktop media viewer
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
