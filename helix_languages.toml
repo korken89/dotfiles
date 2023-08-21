@@ -1,5 +1,17 @@
+[language-server.ltex-ls]
+command = "ltex-ls"
+
+[language-server.ltex-ls.config]
+ltex.enabled = ["rust"]
+
 [[language]]
 name = "rust"
+# spell checking in Rust on master
+language-servers = [ "ltex-ls", "rust-analyzer" ]
 
-[language.config]
-rust-analyzer.diagnostics.disabled = ["mismatched-arg-count", "macro-error", "unresolved-proc-macro"]
+# [language.config]
+# rust-analyzer.diagnostics.disabled = ["mismatched-arg-count", "macro-error", "unresolved-proc-macro"]
+
+[[language]]
+name = "git-commit"
+language-servers = [ "ltex-ls" ]
