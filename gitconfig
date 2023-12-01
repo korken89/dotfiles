@@ -31,3 +31,5 @@
 	ui = auto
 [diff]
 	external = difft
+[worktree]
+	guessRemote = true

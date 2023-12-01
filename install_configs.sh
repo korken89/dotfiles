@@ -7,8 +7,9 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/dunst
 mkdir -p ~/.config/awesome
 mkdir -p ~/.config/helix
+mkdir -p ~/.config/fontconfig
 
-# Link the configs
+# link the configs
 ln -sf "$(pwd)/alacritty.yml" ~/.config/alacritty/alacritty.yml
 ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
 ln -sf "$(pwd)/config.rasi" ~/.config/rofi/config.rasi
@@ -22,12 +23,15 @@ ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 ln -sf "$(pwd)/helix_languages.toml" ~/.config/helix/languages.toml
 ln -sf "$(pwd)/helix_config.toml" ~/.config/helix/config.toml
 ln -sf "$(pwd)/profile" ~/.profile
+ln -sf "$(pwd)/fonts.conf" ~/.config/fontconfig/fonts.conf
+
+fc-cache
 
 sudo ln -sf "$(pwd)/pixellock" /usr/bin/pixellock
 
 
 # Install minimal stuff
-sudo pacman -S alacritty awesome rofi nitrogen picom volumeicon xorg \
+sudo pacman -S noto-fonts-emoji alacritty awesome rofi nitrogen picom volumeicon xorg \
                helix git base-devel imagemagick dunst xautolock \
                lightdm lightdm-slick-greeter lightdm-gtk-greeter \
                light maim xclip thunar firefox lxappearance network-manager-applet \
@@ -42,7 +46,7 @@ sudo pacman -S alacritty awesome rofi nitrogen picom volumeicon xorg \
 rm -rf yay
 (git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --needed --noconfirm)
 
-yay -S nerd-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-font-awesome ttf-ms-fonts lightdm-settings --needed --noconfirm
+yay -S nerd-fonts-complete noto-fonts noto-fonts-cjk noto-fonts-extra ttf-font-awesome ttf-ms-fonts lightdm-settings --needed --noconfirm
 
 # Groups
 
