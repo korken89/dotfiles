@@ -33,3 +33,5 @@
 	external = difft
 [worktree]
 	guessRemote = true
+[init]
+	defaultBranch = main
