@@ -10,7 +10,7 @@ mkdir -p ~/.config/helix
 mkdir -p ~/.config/fontconfig
 
 # link the configs
-ln -sf "$(pwd)/alacritty.yml" ~/.config/alacritty/alacritty.yml
+ln -sf "$(pwd)/alacritty.toml" ~/.config/alacritty/alacritty.toml
 ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
 ln -sf "$(pwd)/config.rasi" ~/.config/rofi/config.rasi
 ln -sf "$(pwd)/dunstrc" ~/.config/dunst/dunstrc

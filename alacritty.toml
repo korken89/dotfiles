@@ -1,0 +1,76 @@
+[colors.primary]
+background = "0x101010"
+foreground = "0xe0e0e0"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+[font.bold_italic]
+family = "Fira Code"
+style = "Bold Italic"
+
+[font.italic]
+family = "Fira Code"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "V"
+mods = "Shift|Alt"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "K"
+mods = "Shift|Alt"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "J"
+mods = "Shift|Alt"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Home"
+mods = "Shift|Alt"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageUp"
+key = "U"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageDown"
+key = "D"
+mods = "Alt"
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
