@@ -377,7 +377,22 @@ globalkeys = gears.table.join(
     -- Exprorer
     awful.key({ modkey }, "b", function ()
         awful.util.spawn("firefox") end,
-              {description = "internet browser", group = "launcher"})
+              {description = "internet browser", group = "launcher"}),
+    
+    -- Rofimoji
+    awful.key({ modkey, "Shift"   }, "e", function ()
+        awful.util.spawn("rofimoji") end,
+              {description = "emoji picker", group = "launcher"}),
+
+    -- Volume controls
+    awful.key({}, "XF86AudioRaiseVolume", function () 
+        awful.util.spawn("amixer -D pipewire sset Master 1%+") end),
+
+    awful.key({}, "XF86AudioLowerVolume", function () 
+        awful.util.spawn("amixer -D pipewire sset Master 1%-") end),
+
+    awful.key({}, "XF86AudioMute", function () 
+        awful.util.spawn("amixer -D pipewire sset Master toggle") end)
 )
 
 clientkeys = gears.table.join(
