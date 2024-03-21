@@ -40,6 +40,7 @@ sudo pacman -S noto-fonts-emoji alacritty awesome rofi nitrogen picom volumeicon
                rustup cargo-watch cargo-expand cargo-bloat \
                ttf-fira-code tmux fzf inkscape gimp ripgrep \
                arc-icon-theme arc-gtk-theme \
+               rofimoji playerctl \
                --needed --noconfirm
 
 # Install yay and that stuff
